@@ -24,7 +24,7 @@ public class Program
                 return;
             }
             var day = args[0];
-            var dayType = Type.GetType($"AdventOfCode2015.Days.{day}", false, true);
+            var dayType = Type.GetType($"AdventOfCode2017.Days.{day}", false, true);
             if(dayType == null)
             {
                 Console.WriteLine("Invalid day name argument.");
