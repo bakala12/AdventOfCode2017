@@ -1,10 +1,12 @@
+using AdventOfCode2017.Models;
+
 namespace AdventOfCode2017.Input
 {
-    public class CaptchaParser : IInputParser<int[]>
+    public class CaptchaParser : IInputParser<Captcha>
     {
-        public int[] ParseInput(string input)
+        public Captcha ParseInput(string input)
         {
-            return input.Select(c => c - '0').ToArray();
+            return new Captcha(input.Select(c => c - '0').ToArray());
         }
     }
 }

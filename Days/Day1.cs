@@ -1,14 +1,15 @@
 using AdventOfCode2017.Input;
+using AdventOfCode2017.Models;
 
 namespace AdventOfCode2017.Days
 {
-    public class Day1 : AocDay<int[]>
+    public class Day1 : AocDay<Captcha>
     {
-        public Day1(IInputParser<int[]> inputParser) : base(inputParser)
+        public Day1(IInputParser<Captcha> inputParser) : base(inputParser)
         {
         }
 
-        protected override void Part1(int[] input)
+        protected override void Part1(Captcha input)
         {
             int c = 0;
             for(int i = 1; i < input.Length; i++)
@@ -19,7 +20,7 @@ namespace AdventOfCode2017.Days
             Console.WriteLine(c);
         }
 
-        protected override void Part2(int[] input)
+        protected override void Part2(Captcha input)
         {
             int c = 0;
             int m = input.Length / 2;
